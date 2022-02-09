@@ -19,6 +19,22 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        
+        combo_enter {
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <$lt 5 ENTER>;
+        };
+         
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <30 31>;
+            bindings = <$lt 6 ESC>;
+        };
+    };
+    
     keymap {
         compatible = "zmk,keymap";
                 
