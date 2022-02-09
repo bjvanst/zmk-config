@@ -14,16 +14,10 @@
         
         combo_enter {
             timeout-ms = <50>;
-            key-positions = <32 33>;
-            bindings = <$lt 5 ENTER>;
+            key-positions = <0 1>;
+            bindings = <$kp ENTER>;
         };
-         
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <30 31>;
-            bindings = <$lt 6 ESC>;
-        };
-    };
+    };     
 };
 
 &mt {
