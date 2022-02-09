@@ -13,7 +13,6 @@
     tapping_term_ms = <200>;
 };
 
-
 &caps_word{
 
 };
@@ -34,7 +33,9 @@
             bindings = <$lt 6 ESC>;
         };
     };
-    
+};
+
+/ { 
     keymap {
         compatible = "zmk,keymap";
                 
