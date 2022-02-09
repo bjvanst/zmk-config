@@ -34,7 +34,7 @@
        	nav_layer {
             bindings = <
                 &trans          &trans          &trans      &trans          &trans		                &none           &none           &none           &none           &none 
-                &trans          &trans          &trans      &trans          &trans 		                &kp LEFT_ARROW  &kp UP_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW &none
+                &trans          &trans          &trans      &trans          &trans 		                &kp LEFT_ARROW  &kp UP_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW &caps_word
                 &trans          &trans 	        &trans      &trans          &trans 	                    &kp INSERT      &kp HOME        &kp PG_DN       &kp PG_UP       &kp END 
                                                             &trans          &trans  					&kp ENTER       &trans 
 		>;
