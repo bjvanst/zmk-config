@@ -20,6 +20,11 @@
 / {
 	combos {
 		compatible = "zmk,combos";
+		
+		combo_enter {
+			key-positions = <32 33>;
+			bindings = <&kp ENTER>;
+		};
 	};
 
     keymap {
