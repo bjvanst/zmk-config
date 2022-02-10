@@ -44,17 +44,17 @@
 		};
 		
 		combo_lbrace {
-			key-positions = <2 12>;
+			key-positions = <1 11>;
 			bindings = <&kp LEFT_BRACE>;
 		};
 		
 		combo_lbracket {
-			key-positions = <3 13>;
+			key-positions = <2 12>;
 			bindings = <&kp LEFT_BRACKET>;
 		};
 		
 		combo_lparen {
-			key-positions = <4 14>;
+			key-positions = <3 13>;
 			bindings = <&kp LEFT_PARENTHESIS>;
 		};
 		
@@ -65,7 +65,7 @@
 		
 		combo_rbracket {
 			key-positions = <7 17>;
-			bindings = <&kp RIGHT_BRACE>;
+			bindings = <&kp RIGHT_BRACKET>;
 		};
 		
 		combo_rparen {
