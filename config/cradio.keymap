@@ -14,10 +14,21 @@
 };
 
 &caps_word{
-
+	continue-list = <UNDERSCORE MINUS BACKSPACE>;
 };
 
 / {
+	behaviors {
+		hm_pinky: homerow_mods_pinky {
+			compatible = "zmk,behavior-hold-tap";
+			label = "HOMEROW_MODS_PINKY";
+			tapping-term-ms = <225>;
+			quick-tap-ms = <0>;
+			flavor = "tap-preferred";
+			bindings = <&kp>, <&kp>;
+		};
+	};
+
 	combos {
 		compatible = "zmk,combos";
 		
@@ -26,15 +37,41 @@
 			bindings = <&lt 5 ENTER>;
 		};
 		
-		combo_enter2 {
-			key-positions = <31 32>;
-			bindings = <&kp ENTER>;
-		};
-		
 		combo_esc {
 			key-positions = <30 24>;
 			bindings = <&lt 6 ESC>;
 		};
+		
+		combo_lbrace {
+			key-positions = <2 12>;
+			bindings = <&kp LEFT_BRACE>;
+		};
+		
+		combo_lbracket {
+			key-positions = <3 13>;
+			bindings = <&kp LEFT_BRACKET>;
+		};
+		
+		combo_lparen {
+			key-positions = <4 14>;
+			bindings = <&kp LEFT_PARENTHESIS>;
+		};
+		
+		combo_rbrace {
+			key-positions = <9 19>;
+			bindings = <&kp RIGHT_BRACE>;
+		};
+		
+		combo_rbracket {
+			key-positions = <8 18>;
+			bindings = <&kp RIGHT_BRACE>;
+		};
+		
+		combo_rparen {
+			key-positions = <7 17>;
+			bindings = <&kp RIGHT_BRACE>;
+		};
+		
 	};
 
     keymap {
@@ -43,7 +80,7 @@
        	default_layer {
             bindings = <
                 &kp Q           &kp W           &kp E           &kp R           &kp T 						&kp Y           &kp U           &kp I           &kp O           &kp P 
-                &mt LGUI A      &mt LALT S      &mt LCTRL D     &mt LSHIFT F    &kp G 			            &kp H           &mt RSHIFT J    &mt RCTRL K     &mt RALT L      &mt RGUI QUOT
+                &hm_pinky LGUI A      &mt LALT S      &mt LCTRL D     &mt LSHIFT F    &kp G 			            &kp H           &mt RSHIFT J    &mt RCTRL K     &mt RALT L      &hm_pinky RGUI QUOT
                 &kp Z           &kp X           &kp C           &kp V           &kp B				        &kp N           &kp M           &kp CMMA        &kp DOT         &kp FSLH
                                                                 &lt 4 TAB       &lt 1 SPC  			        &lt 2 BSPC      &lt 3 DEL
             >;
