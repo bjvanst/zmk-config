@@ -22,12 +22,12 @@
 		compatible = "zmk,combos";
 		
 		combo_enter {
-			key-positions = <32 33>;
+			key-positions = <25 33>;
 			bindings = <&lt 5 ENTER>;
 		};
 		
 		combo_esc {
-			key-positions = <30 31>;
+			key-positions = <30 24>;
 			bindings = <&lt 6 ESC>;
 		};
 	};
