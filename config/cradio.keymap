@@ -19,9 +19,9 @@
 
 / {
 	behaviors {
-		hm_pinky: homerow_mods_pinky {
+		hm_pinky: homerow_mods {
 			compatible = "zmk,behavior-hold-tap";
-			label = "HOMEROW_MODS_PINKY";
+			label = "HOMEROW_MODS";
 			tapping-term-ms = <225>;
 			quick-tap-ms = <0>;
 			flavor = "tap-preferred";
