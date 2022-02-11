@@ -52,6 +52,7 @@
 		ttm: thumb_tog_mods {
 			compatible = "zmk,behavior-hold-tap";
 			label = "THUMB_TOG_MODS";
+			#binding-cells = <2>;
 			tapping-term-ms = <200>;
 			quick-tap-ms = <0>;
 			flavor = "tap-preferred";
