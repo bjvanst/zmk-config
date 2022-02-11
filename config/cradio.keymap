@@ -33,7 +33,6 @@
 			label = "HOMEROW_MODS_PINKY";
 			#binding-cells = <2>;
 			tapping-term-ms = <250>;
-			tapping-term-ms = <2>;
 			quick-tap-ms = <0>;
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
@@ -138,7 +137,7 @@
 		num_layer {
             bindings = <
                 &none       	&kp N7        &kp N8        &kp N9        &none    			    	&trans          &trans          &trans        &trans        &trans 
-                &kp SEMI        &kp N4        &kp N5        &kp N6        &kp BSLH			        &trans          &trans          &trans        &trans        &trans
+                &kp SEMI        &kp N4        &kp N5        &kp N6        &none			        	&trans          &trans          &trans        &trans        &trans
                 &kp GRAVE       &kp N1        &kp N2        &kp N3        &kp EQUAL					&trans          &trans          &trans        &trans        &trans
                                                             &kp N0        &kp MINUS  				&trans          &trans 
 		>;
