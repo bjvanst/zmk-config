@@ -25,8 +25,8 @@
 / {
 	behaviors {
 	
-		#Noticed that I trigger the pinky hold-tap accidentally
-		#Increase the delay slightly to avoid
+		//Noticed that I trigger the pinky hold-tap accidentally
+		//Increase the delay slightly to avoid
 		
 		hm_pinky: homerow_mods_pinky {
 			compatible = "zmk,behavior-hold-tap";
@@ -42,8 +42,8 @@
 	combos {
 		compatible = "zmk,combos";
 
-		#####
-		#Thumb combos
+
+		//Thumb combos
 		
 		combo_enter {
 			key-positions = <30 24>;
@@ -55,8 +55,8 @@
 			bindings = <&lt 6 ESC>;
 		};
 
-		#####
-		#Left-hand combos
+
+		//Left-hand combos
 		
 		combo_lbrace {
 			key-positions = <1 11>;
@@ -83,8 +83,8 @@
 			bindings = <&kp SLASH>;
 		};
 		
-		#####
-		#Right-hand combos
+		
+		//Right-hand combos
 		
 		combo_rbrace {
 			key-positions = <8 18>;
