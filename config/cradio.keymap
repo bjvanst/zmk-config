@@ -104,7 +104,7 @@
 		
 		
 		//Right-hand combos
-		combo_lcaps_word {
+		combo_rcaps_word {
 			key-positions = <15 16>;
 			bindings = <&caps_word>;
 		};
