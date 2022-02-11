@@ -75,7 +75,7 @@
 		
 		combo_gthan {
 			key-positions = <4 14>;
-			bindings = <&kp LEFT_PARENTHESIS>;
+			bindings = <&kp GREATER_THAN>;
 		};
 		
 		combo_slash {
@@ -101,9 +101,9 @@
 			bindings = <&kp RIGHT_PARENTHESIS>;
 		};
 		
-		combo_lparen {
+		combo_lthan {
 			key-positions = <5 15>;
-			bindings = <&kp LEFT_PARENTHESIS>;
+			bindings = <&kp LESS_THAN>;
 		};
 		
 		combo_bslash {
