@@ -151,7 +151,7 @@
 		//refer to https://colemakmods.github.io/mod-dh/keyboards.html
        	colemakdh_layer {
             bindings = <
-                &kp Q           &kp W           &kp F           &kp P           &kp B 					&kp J           &kp L           &kp U           &kp Y           &kp ; 
+                &kp Q           &kp W           &kp F           &kp P           &kp B 					&kp J           &kp L           &kp U           &kp Y           &kp SEMI 
                 &hmp LGUI A    	&hm LALT R      &hm LCTRL S     &hm LSHIFT T    &kp G 			   		&kp M           &hm RSHIFT N    &hm RCTRL E     &hm RALT I      &hmp RGUI O
                 &kp Z           &kp X           &kp C           &kp D           &kp V				    &kp K           &kp H           &kp CMMA        &kp DOT         &kp QUESTION
 																&lt FUNC TAB    &lt NAV SPC  			&lt NUM BSPC    &lt MEDIA DEL
