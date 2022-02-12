@@ -33,12 +33,12 @@
 	
 		//Allow for repeat space and backspace 
 		//after a double-tap
-		tl: thumb_layers {
+		tlt: thumb_layer_tap {
 			compatible = "zmk,behavior-hold-tap";
-			label = "THUMB_LAYERS";
+			label = "THUMB_LAYER_TAP";
 			#binding-cells = <2>;
 			tapping-term-ms = <200>;
-			quick-tap-ms = <180>;
+			quick-tap-ms = <175>;
 			flavor = "tap-preferred";
 			bindings = <&lt>, <&kp>;
 		};
@@ -50,7 +50,7 @@
 			label = "HOMEROW_MODS";
 			#binding-cells = <2>;
 			tapping-term-ms = <200>;
-			quick-tap-ms = <200>;
+			quick-tap-ms = <175>;
 			flavor = "tap-preferred";
 			bindings = <&sk>, <&kp>;
 		};
