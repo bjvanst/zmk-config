@@ -9,11 +9,11 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define CMAK 1
-#define NAV 2
-#define NUM 3
-#define MEDIA 4
-#define FUNC 5
-#define ZMKL 6
+#define NAV 1
+#define NUM 2
+#define MEDIA 3
+#define FUNC 4
+#define ZMKL 5
 
 &caps_word{
 	continue-list = <UNDERSCORE MINUS BACKSPACE>;
