@@ -172,37 +172,37 @@
 			layers = <0>;
         };
 		
-		combo_semi_hdalte {
+		combo_semi1 {
 			key-positions = <28 29>;
 			bindings = <&kp SEMI>;
 			layers = <1>;
 		};
 	
-		combo_q_hdalte {
+		combo_q1 {
 			key-positions = <6 7>;
 			bindings = <&kp Q>;
 			layers = <1>
 		};
-/*		
-		combo_z_hdalte {
+		
+		combo_z1 {
 			key-positions = <7 8>;
 			bindings = <&kp Z>;
 			layers = <1>;
 		};
-*/				
-		combo_j_hdgold {
+				
+		combo_j2 {
 			key-positions = <10 11>;
 			bindings = <&kp J>;
 			layers = <2>;
 		};
 		
-		combo_q_hdgold {
+		combo_q2 {
 			key-positions = <6 7>;
 			bindings = <&kp Q>;
 			layers = <2>;
 		};
 	
-		combo_z_hdgold {
+		combo_z2 {
 			key-positions = <20	21>;
 			bindings = <&kp Z>;
 			layers = <2>;
