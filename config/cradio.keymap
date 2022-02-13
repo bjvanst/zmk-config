@@ -183,13 +183,13 @@
 			bindings = <&kp Q>;
 			layers = <1>
 		};
-		
+/*		
 		combo_z_hdalte {
 			key-positions = <7 8>;
 			bindings = <&kp Z>;
 			layers = <1>;
 		};
-		/*		
+				
 		combo_j_hdgold {
 			key-positions = <10 11>;
 			bindings = <&kp J>;
