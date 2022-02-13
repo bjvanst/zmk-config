@@ -166,7 +166,7 @@
             >;
 		};
         
-        workman32k_layer {
+        wkman_layer {
             bindings = <
                 &none           &kp D           &kp R           &kp W           &kp B 					&kp J           &kp F           &kp U           &kp P           &none 
                 &hmp LGUI A    	&hm LALT S      &hm LCTRL H     &hm LSHIFT T    &kp G 			   		&kp Y           &hm RSHIFT N    &hm RCTRL E     &hm RALT O      &hmp RGUI I
