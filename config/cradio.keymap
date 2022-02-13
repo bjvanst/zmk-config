@@ -181,7 +181,7 @@
 		combo_q1 {
 			key-positions = <6 7>;
 			bindings = <&kp Q>;
-			layers = <1>
+			layers = <1>;
 		};
 		
 		combo_z1 {
