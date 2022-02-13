@@ -151,11 +151,21 @@
 			bindings = <&kp BACKSLASH>;
 		};
         
+        //Build a semi-colon!
         combo_semi {
             key-positions = <27 28>;
             bindings = <&kp SEMI>;
         };
-		
+        
+        combo_colon {
+            key-positions = <28 29>;
+            bindings = <&kp COLON>;
+        };
+        
+        combo_at {
+            key-positions = <4 10>;
+            bindings = <&kp AT>;
+        };
 	};
 
     keymap {
@@ -174,7 +184,7 @@
             bindings = <
                 &none           &kp D           &kp R           &kp W           &kp B 					&kp J           &kp F           &kp U           &kp P           &none 
                 &hmp LGUI A    	&hm LALT S      &hm LCTRL H     &hm LSHIFT T    &kp G 			   		&kp Y           &hm RSHIFT N    &hm RCTRL E     &hm RALT O      &hmp RGUI I
-                &kp Z           &kp X           &kp M           &kp C           &kp V				    &kp K           &kp L           &kp Q           &mt CMMA DOT    &kp QUESTION
+                &kp Z           &kp X           &kp M           &kp C           &kp V				    &kp K           &kp L           &kp CMMA        &kp DOT         &kp QUESTION
 																&lt FUNC TAB    &tlt NAV SPC  			&tlt NUM BSPC   &lt MEDIA DEL
             >;
 		};
