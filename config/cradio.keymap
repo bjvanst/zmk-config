@@ -189,7 +189,7 @@
 			bindings = <&kp Z>;
 			layers = <1>;
 		};
-				
+*/				
 		combo_j_hdgold {
 			key-positions = <10 11>;
 			bindings = <&kp J>;
@@ -206,7 +206,7 @@
 			key-positions = <20	21>;
 			bindings = <&kp Z>;
 			layers = <2>;
-		};*/
+		};
 	};
 
     keymap {
