@@ -171,13 +171,13 @@
             bindings = <&kp COLON>;
 			layers = <0>;
         };
-/*		
+		
 		combo_semi_hdalte {
 			key-positions = <28 29>;
 			bindings = <&kp SEMI>;
 			layers = <1>;
 		};
-		
+	/*	
 		combo_q_hdalte {
 			key-positions = <6 7>;
 			bindings = <&kp Q>;
