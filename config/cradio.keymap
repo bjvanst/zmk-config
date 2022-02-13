@@ -12,10 +12,10 @@
 #define HDGOLD 2
 
 #define NAV 3
-#define NUM NAV+1
-#define MEDIA NAV+2
-#define FUNC NAV+3
-#define ZMKL NAV+4
+#define NUM 4
+#define MEDIA 5
+#define FUNC 6
+#define ZMKL 7
 
 &caps_word{
 	continue-list = <UNDERSCORE MINUS BACKSPACE>;
