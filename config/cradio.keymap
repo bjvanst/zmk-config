@@ -177,7 +177,7 @@
 			bindings = <&kp SEMI>;
 			layers = <1>;
 		};
-	/*	
+	
 		combo_q_hdalte {
 			key-positions = <6 7>;
 			bindings = <&kp Q>;
@@ -201,7 +201,7 @@
 			bindings = <&kp Q>;
 			layers = <2>;
 		};
-		
+		/*	
 		combo_z_hdgold {
 			key-positions = <20	21>;
 			bindings = <&kp Z>;
