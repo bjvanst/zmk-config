@@ -171,7 +171,7 @@
             bindings = <&kp COLON>;
 			layers = <0>;
         };
-		
+/*		
 		combo_semi_hdalte {
 			key-positions = <28 29>;
 			bindings = <&kp SEMI>;
@@ -206,7 +206,7 @@
 			key-positions = <20	21>;
 			bindings = <&kp Z>;
 			layers = <2>;
-		};
+		};*/
 	};
 
     keymap {
