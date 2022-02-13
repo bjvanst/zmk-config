@@ -230,7 +230,7 @@
             >;
 		};
 		
-        hdalte_layer {
+        hdgold_layer {
             bindings = <
                 &none           &kp F           &kp M           &kp P           &kp V 					&kp SEMI        &kp DOT         &kp SLASH       &kp QUOT        &none 
                 &hmp LGUI R    	&hm LALT S      &hm LCTRL N     &hm LSHIFT D    &kp W 			   		&kp CMMA        &hm RSHIFT A    &hm RCTRL E     &hm RALT I      &hmp RGUI H
