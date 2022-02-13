@@ -197,7 +197,7 @@
 		};
 		
 		combo_q2 {
-			key-positions = <6 7>;
+			key-positions = <28 29>;
 			bindings = <&kp Q>;
 			layers = <2>;
 		};
