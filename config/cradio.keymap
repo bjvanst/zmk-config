@@ -84,12 +84,10 @@
 			bindings = <&lt ZMKL ESC>;
 		};
 		
-        /* Not currently being used
-		combo_colemak {
+		combo_workman {
 			key-positions = <25 32 33>;
 			bindings = <&tog WKMAN>;
 		};
-        */
 
 		//Left-hand combos
 		combo_lcaps_word {
