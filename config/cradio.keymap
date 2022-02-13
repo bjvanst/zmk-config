@@ -8,7 +8,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define WKMAN 1
 #define NAV 2
 #define NUM 3
 #define MEDIA 4
@@ -86,7 +85,7 @@
 		
 		combo_workman {
 			key-positions = <25 32 33>;
-			bindings = <&tog WKMAN>;
+			bindings = <&tog 1>;
 		};
 
 		//Left-hand combos
