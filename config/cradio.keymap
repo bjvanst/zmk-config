@@ -189,24 +189,6 @@
 			bindings = <&kp Z>;
 			layers = <1>;
 		};
-				
-		combo_j2 {
-			key-positions = <10 11>;
-			bindings = <&kp J>;
-			layers = <2>;
-		};
-		
-		combo_q2 {
-			key-positions = <28 29>;
-			bindings = <&kp Q>;
-			layers = <2>;
-		};
-	
-		combo_z2 {
-			key-positions = <20	21>;
-			bindings = <&kp Z>;
-			layers = <2>;
-		};
 	};
 
     keymap {
@@ -230,12 +212,12 @@
             >;
 		};
 		
-        hdgold_layer {
+        colemakdh_layer {
             bindings = <
-                &none           &kp F           &kp M           &kp P           &kp V 					&kp SEMI        &kp DOT         &kp SLASH       &kp QUOT        &none 
-                &hmp LGUI R    	&hm LALT S      &hm LCTRL N     &hm LSHIFT D    &kp W 			   		&kp CMMA        &hm RSHIFT A    &hm RCTRL E     &hm RALT I      &hmp RGUI H
-                &kp X           &kp G           &kp L           &kp C           &kp B				    &kp MINUS       &kp U           &kp O           &kp Y           &kp K
-																&lt FUNC TAB    &tlt NAV SPC  			&tlt NUM T      &lt MEDIA BSPC
+                &kp Q           &kp W           &kp F           &kp P           &kp B 					&kp J        	&kp L         	&kp U	       	&kp Y         	&kp SEMI 
+                &hmp LGUI A    	&hm LALT R      &hm LCTRL S     &hm LSHIFT T    &kp G 			   		&kp M        	&hm RSHIFT N    &hm RCTRL E     &hm RALT I      &hmp RGUI O
+                &kp Z           &kp X           &kp C           &kp D           &kp V				    &kp K       	&kp H           &kp CMMA        &kp DOT         &kp QUESTION
+																&lt FUNC TAB    &tlt NAV SPC  			&tlt NUM BSPC   &lt MEDIA DEL
             >;
 		};
         
