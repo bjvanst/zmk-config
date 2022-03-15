@@ -57,9 +57,9 @@
 			bindings = <&sk>, <&kp>;
 		};
 		
-		hmi: homerow_mods {
+		hmi: homerow_mods_index {
 			compatible = "zmk,behavior-hold-tap";
-			label = "HOMEROW_MODS";
+			label = "HOMEROW_MODS_INDEX";
 			#binding-cells = <2>;
 			tapping-term-ms = <200>;
 			quick-tap-ms = <175>;
