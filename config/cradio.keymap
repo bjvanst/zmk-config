@@ -173,7 +173,7 @@
         combo_semi {
             key-positions = <27 28>;
             bindings = <&kp SEMI>;
-			layers = <0 1>;
+			layers = <0 2>;
         };
         
         combo_colon {
