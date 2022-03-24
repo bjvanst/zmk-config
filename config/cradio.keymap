@@ -133,7 +133,7 @@
 		
 		combo_lparen {
 			key-positions = <3 13>;
-			bindings = <&mt LEFT_PARENTHESIS>;
+			bindings = <&kp LEFT_PARENTHESIS>;
 		};
 		
 		combo_lthan {
