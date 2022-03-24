@@ -82,7 +82,7 @@
 
     macros {
 	    mcr_paren: mcr_paren {
-		    label = "mcr_paren";
+		    label = "ZM_mcr_paren";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings = <&kp LPAR &kp RPAR &kp LEFT>;
