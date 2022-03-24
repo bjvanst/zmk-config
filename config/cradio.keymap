@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define HDALTE 1
-#define HDGOLD 2
+#define QWERTY 2
 
 #define NAV 3
 #define NUM 4
@@ -112,7 +112,7 @@
 		
 		combo_hdgold {
 			key-positions = <24 30 31>;
-			bindings = <&tog HDGOLD>;
+			bindings = <&tog QWERTY>;
 		};
 
 		//Left-hand combos
@@ -133,7 +133,7 @@
 		
 		combo_lparen {
 			key-positions = <3 13>;
-			bindings = <&mt &both_paren LPAR>;
+			bindings = <&kp LPAR>;
 		};
 		
 		combo_lthan {
@@ -184,30 +184,6 @@
             bindings = <&kp SEMI>;
 			layers = <0 2>;
         };
-        
-        combo_colon {
-            key-positions = <28 29>;
-            bindings = <&kp COLON>;
-			layers = <0>;
-        };
-		
-		combo_semi1 {
-			key-positions = <28 29>;
-			bindings = <&kp SEMI>;
-			layers = <1>;
-		};
-	
-		combo_q1 {
-			key-positions = <6 7>;
-			bindings = <&kp Q>;
-			layers = <1>;
-		};
-		
-		combo_z1 {
-			key-positions = <7 8>;
-			bindings = <&kp Z>;
-			layers = <1>;
-		};
 	};
 
     keymap {
@@ -215,9 +191,9 @@
                 
        	default_layer {
             bindings = <
-                &kp Q           &kp W           &kp E           &kp R           &kp T 					&kp Y           &kp U           &kp I           &kp O           &kp P 
-                &hmp LGUI A    	&hm LALT S      &hm LCTRL D     &hmi LSHIFT F    &kp G 			   		&kp H           &hmi RSHIFT J    &hm RCTRL K     &hm RALT L      &hmp RGUI QUOT
-                &kp Z           &kp X           &kp C           &kp V           &kp B				    &kp N           &kp M           &kp CMMA        &kp DOT         &kp QUESTION
+                &kp Q           &kp W           &kp F           &kp P           &kp B 					&kp J        	&kp L         	&kp U	       	&kp Y         	&kp QUOT 
+                &hmp LGUI A    	&hm LALT R      &hm LCTRL S     &hm LSHIFT T    &kp G 			   		&kp M        	&hm RSHIFT N    &hm RCTRL E     &hm RALT I      &hmp RGUI O
+                &kp Z           &kp X           &kp C           &kp D           &kp V				    &kp K       	&kp H           &kp CMMA        &kp DOT         &kp QUESTION
 																&lt FUNC TAB    &tlt NAV SPC  			&tlt NUM BSPC   &lt MEDIA DEL
             >;
 		};
@@ -231,11 +207,11 @@
             >;
 		};
 		
-        colemakdh_layer {
+        qwerty_layer {
             bindings = <
-                &kp Q           &kp W           &kp F           &kp P           &kp B 					&kp J        	&kp L         	&kp U	       	&kp Y         	&kp QUOT 
-                &hmp LGUI A    	&hm LALT R      &hm LCTRL S     &hm LSHIFT T    &kp G 			   		&kp M        	&hm RSHIFT N    &hm RCTRL E     &hm RALT I      &hmp RGUI O
-                &kp Z           &kp X           &kp C           &kp D           &kp V				    &kp K       	&kp H           &kp CMMA        &kp DOT         &kp QUESTION
+                &kp Q           &kp W           &kp E           &kp R           &kp T 					&kp Y           &kp U           &kp I           &kp O           &kp P 
+                &hmp LGUI A    	&hm LALT S      &hm LCTRL D     &hmi LSHIFT F    &kp G 			   		&kp H           &hmi RSHIFT J    &hm RCTRL K     &hm RALT L      &hmp RGUI QUOT
+                &kp Z           &kp X           &kp C           &kp V           &kp B				    &kp N           &kp M           &kp CMMA        &kp DOT         &kp QUESTION
 																&lt FUNC TAB    &tlt NAV SPC  			&tlt NUM BSPC   &lt MEDIA DEL
             >;
 		};
