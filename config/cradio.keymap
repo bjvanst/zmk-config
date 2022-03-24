@@ -80,6 +80,15 @@
 		};	
 	};
 
+    macros {
+	    mcr_paren: mcr_paren {
+		    label = "mcr_paren";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+		};
+	};
+
 	combos {
 		compatible = "zmk,combos";
 
@@ -124,7 +133,7 @@
 		
 		combo_lparen {
 			key-positions = <3 13>;
-			bindings = <&kp LEFT_PARENTHESIS>;
+			bindings = <&mt LPAREN mcr_paren>;
 		};
 		
 		combo_lthan {
@@ -181,24 +190,6 @@
             bindings = <&kp COLON>;
 			layers = <0>;
         };
-		
-		combo_semi1 {
-			key-positions = <28 29>;
-			bindings = <&kp SEMI>;
-			layers = <1>;
-		};
-	
-		combo_q1 {
-			key-positions = <6 7>;
-			bindings = <&kp Q>;
-			layers = <1>;
-		};
-		
-		combo_z1 {
-			key-positions = <7 8>;
-			bindings = <&kp Z>;
-			layers = <1>;
-		};
 	};
 
     keymap {
