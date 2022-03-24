@@ -81,8 +81,8 @@
 	};
 
     macros {
-	    mcr_paren: mcr_paren {
-		    label = "ZM_mcr_paren";
+	    both_paren: both_paren {
+		    label = "ZM_both_paren";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings = <&kp LPAR &kp RPAR &kp LEFT>;
@@ -133,7 +133,7 @@
 		
 		combo_lparen {
 			key-positions = <3 13>;
-			bindings = <&mt &mcr_paren LPAR>;
+			bindings = <&mt &both_paren LPAR>;
 		};
 		
 		combo_lthan {
