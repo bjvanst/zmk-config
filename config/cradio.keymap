@@ -80,15 +80,6 @@
 		};	
 	};
 
-    macros {
-	    both_paren: both_paren {
-		    label = "ZM_both_paren";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&kp LPAR &kp RPAR &kp LEFT>;
-		};
-	};
-
 	combos {
 		compatible = "zmk,combos";
 
