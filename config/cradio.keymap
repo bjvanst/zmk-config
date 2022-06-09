@@ -54,7 +54,7 @@
 			tapping-term-ms = <200>;
 			quick-tap-ms = <175>;
 			flavor = "tap-preferred";
-			bindings = <&sk>, <&kp>;
+			bindings = <&kp>, <&kp>;
 		};
 		
 		hmi: homerow_mods_index {
@@ -64,7 +64,7 @@
 			tapping-term-ms = <200>;
 			quick-tap-ms = <175>;
 			flavor = "balanced";
-			bindings = <&sk>, <&kp>;
+			bindings = <&kp>, <&kp>;
 		};
 
 		//Increase tapping term for pinky home position 
@@ -78,15 +78,6 @@
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
 		};	
-	};
-
-    macros {
-	    both_paren: both_paren {
-		    label = "ZM_both_paren";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&kp LPAR &kp RPAR &kp LEFT>;
-		};
 	};
 
 	combos {
@@ -230,7 +221,7 @@
                 &kp GRAVE		&kp N7        	&kp N8        	&kp N9        	&none    			    &trans          &trans          &trans        &trans        &trans 
                 &kp N0    	    &kp N4        	&kp N5        	&kp N6        	&none			        &trans          &trans          &trans        &trans        &trans
                 &none       	&kp N1        	&kp N2        	&kp N3        	&kp EQUAL				&trans          &trans          &trans        &trans        &trans
-																&kp N0        	&kp MINUS  				&trans        	&trans 
+																&none        	&kp MINUS  				&trans        	&trans 
 		>;
 		};	
 		
@@ -239,7 +230,7 @@
                 &none      		&none        	&none           &none             &none  				&trans          &trans          &trans        &trans        &trans
                 &kp C_PREV      &kp C_VOL_DN    &kp C_VOL_UP    &kp C_NEXT        &none  	    		&trans          &trans          &trans        &trans        &trans 
                 &none           &none           &none           &none             &none   				&trans          &trans          &trans        &trans        &trans   
-                                                                &kp C_PLAY_PAUSE  &kp C_MUTE  			&trans          &trans 
+                                                                &kp C_MUTE        &kp C_PLAY_PAUSE  	&trans          &trans 
 		>;
 		};	
         
