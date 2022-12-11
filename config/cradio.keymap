@@ -166,7 +166,7 @@
     macros {
     
         zm_copy: zm_copy {
-            label = "ZM_copy"
+            label = "ZM_copy";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -177,7 +177,7 @@
             };
             
         zm_cut: zm_cut {
-            label = "ZM_cut"
+            label = "ZM_cut";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -188,7 +188,7 @@
             };
 
         zm_paste: zm_paste {
-            label = "ZM_paste"
+            label = "ZM_paste";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
