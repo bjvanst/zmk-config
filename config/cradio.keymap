@@ -8,14 +8,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define HDALTE 1
-#define QWERTY 2
-
-#define NAV 3
-#define NUM 4
-#define MEDIA 5
-#define FUNC 6
-#define ZMKL 7
+#define NAV 1
+#define NUM 2
+#define MEDIA 3
+#define FUNC 4
+#define ZMKL 5
 
 &caps_word{
 	continue-list = <UNDERSCORE MINUS BACKSPACE>;
@@ -173,9 +170,44 @@
         combo_semi {
             key-positions = <27 28>;
             bindings = <&kp SEMI>;
-			layers = <0 2>;
         };
 	};
+    
+    macros {
+    
+        zm_copy: zm_copy {
+            label = "ZM_copy"
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LCTRL>
+                ;
+            };
+            
+        zm_cut: zm_cut {
+            label = "ZM_cut"
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp X>
+                , <&macro_release &kp LCTRL>
+                ;
+            };
+
+        zm_paste: zm_paste {
+            label = "ZM_paste"
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LCTRL>
+                ;
+            };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -189,28 +221,10 @@
             >;
 		};
         
-        hdalte_layer {
-            bindings = <
-                &none           &kp G           &kp M           &kp F           &kp V 					&kp QUOT        &kp U           &kp K           &kp J           &none 
-                &hmp LGUI R    	&hm LALT S      &hm LCTRL N     &hm LSHIFT T    &kp P 			   		&kp Y           &hm RSHIFT A    &hm RCTRL O     &hm RALT I      &hmp RGUI H
-                &kp X           &kp C           &kp L           &kp D           &kp B				    &kp MINUS       &kp W           &kp SLASH       &kp CMMA        &kp DOT
-																&lt FUNC TAB    &tlt NAV SPC  			&tlt NUM E      &lt MEDIA BSPC
-            >;
-		};
-		
-        qwerty_layer {
-            bindings = <
-                &kp Q           &kp W           &kp E           &kp R           &kp T 					&kp Y           &kp U           &kp I           &kp O           &kp P 
-                &hmp LGUI A    	&hm LALT S      &hm LCTRL D     &hmi LSHIFT F    &kp G 			   		&kp H           &hmi RSHIFT J    &hm RCTRL K     &hm RALT L      &hmp RGUI QUOT
-                &kp Z           &kp X           &kp C           &kp V           &kp B				    &kp N           &kp M           &kp CMMA        &kp DOT         &kp QUESTION
-																&lt FUNC TAB    &tlt NAV SPC  			&tlt NUM BSPC   &lt MEDIA DEL
-            >;
-		};
-        
        	nav_layer {
             bindings = <
-                &trans          &trans          &trans      	&trans          &trans		           	&none           &none           &none           &none           &none 
-                &trans          &trans          &trans      	&trans          &trans 		            &kp LEFT_ARROW  &kp UP_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW &none
+                &trans          &trans          &trans      	&trans          &trans		           	&none           &none           &kp UP_ARROW    &none           &none 
+                &trans          &zm_cut         &zm_copy       	&zm_paste       &caps_word 		        &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &none
                 &trans          &trans 	        &trans      	&trans          &trans 	                &kp HOME        &kp PG_UP       &kp PG_DN       &kp END			&kp INSERT
 																&trans          &trans 					&trans       	&trans 
 		>;
