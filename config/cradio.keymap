@@ -106,6 +106,16 @@
             flavor = "tap-preferred";
             bindings = <&zm_paren>, <&kp>;
         };
+        
+        qu_t: qu_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "QU_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+            bindings = <&zm_qu>, <&kp>;
+        };
 	};
 
 	combos {
@@ -195,13 +205,13 @@
         
         //Combos to mess with dropping top pinky row
         combo_l_rp {
-            key-positions = <17 18>;
+            key-positions = <18 19>;
             bindings = <&kp QUOT>;
         };
         
         combo_r_rp {
             key-positions = <10 11>;
-            bindings = <&kp Q>;
+            bindings = <&qu_t 0 Q>;
         };
 	};
     
@@ -270,6 +280,15 @@
                 = <&macro_tap &kp LEFT_PARENTHESIS>
                 , <&macro_tap &kp RIGHT_PARENTHESIS>
                 , <&macro_tap &kp LEFT_ARROW>
+                ;
+        };
+        
+        zm_qu: zm_qu {
+            label = "ZM_qu";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp Q &kp U>
                 ;
         };
     };
