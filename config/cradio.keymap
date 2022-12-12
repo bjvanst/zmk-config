@@ -211,7 +211,7 @@
         
         combo_l_rp {
             key-positions = <10 11>;
-            bindings = <&qu_t 0 Q>;
+            bindings = <&qu_t Q 0>;
         };
 	};
     
