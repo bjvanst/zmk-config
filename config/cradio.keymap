@@ -76,7 +76,7 @@
 			bindings = <&kp>, <&kp>;
 		};
         
-        //Create hold tap behaviours to send macros on hold
+        //Hold tap behaviours to send macros on hold
         brc_t: brace_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "BRACE_TAP";
@@ -85,6 +85,26 @@
             quick-tap-ms = <175>;
             flavor = "tap-preferred";
             bindings = <&zm_brace>, <&kp>;
+        };
+        
+        brk_t: bracket_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BRACKET_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+            bindings = <&zm_bracket>, <&kp>;
+        };
+        
+        prn_t: paren_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "PAREN_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+            bindings = <&zm_paren>, <&kp>;
         };
 	};
 
@@ -112,17 +132,17 @@
 			
 		combo_lbrace {
 			key-positions = <1 11>;
-			bindings = <&kp LEFT_BRACE>;
+			bindings = <&brc_t 0 LEFT_BRACE>;
 		};
 		
 		combo_lbracket {
 			key-positions = <2 12>;
-			bindings = <&kp LEFT_BRACKET>;
+			bindings = <&brk_t 0 LEFT_BRACKET>;
 		};
 		
 		combo_lparen {
 			key-positions = <3 13>;
-			bindings = <&kp LPAR>;
+			bindings = <&prn_t 0 LPAR>;
 		};
 		
 		combo_lthan {
@@ -144,7 +164,7 @@
 		
 		combo_rbrace {
 			key-positions = <8 18>;
-			bindings = <&brc_t 0 RIGHT_BRACE>;
+			bindings = <&kp RIGHT_BRACE>;
 		};
 		
 		combo_rbracket {
@@ -214,8 +234,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp RIGHT_BRACE>
-                , <&macro_tap &kp LEFT_BRACE>
+                = <&macro_tap &kp LEFT_BRACE>
+                , <&macro_tap &kp RIGHT_BRACE>
                 , <&macro_tap &kp LEFT_ARROW>
                 ;
         };
@@ -225,8 +245,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp RIGHT_BRACKET>
-                , <&macro_tap &kp LEFT_BRACKET>
+                = <&macro_tap &kp LEFT_BRACKET>
+                , <&macro_tap &kp RIGHT_BRACKET>
                 , <&macro_tap &kp LEFT_ARROW>
                 ;
         };
@@ -236,8 +256,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp RIGHT_PARENTHESIS>
-                , <&macro_tap &kp LEFT_PARENTHESIS>
+                = <&macro_tap &kp LEFT_PARENTHESIS>
+                , <&macro_tap &kp RIGHT_PARENTHESIS>
                 , <&macro_tap &kp LEFT_ARROW>
                 ;
         };
