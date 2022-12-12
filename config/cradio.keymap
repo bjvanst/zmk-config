@@ -252,6 +252,18 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
+ 
+        zm_undo: zm_undo {
+            label = "ZM_undo";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp Z>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
          
         zm_brace: zm_brace {
             label = "ZM_brace";
@@ -305,7 +317,7 @@
                 
        	default_layer {
             bindings = <
-                &kp Q           &kp W           &kp F           &kp P           &kp B 					&kp J        	&kp L         	&kp U	       	&kp Y         	&kp QUOT 
+                &qu_t Q 0       &kp W           &kp F           &kp P           &kp B 					&kp J        	&kp L         	&kp U	       	&kp Y         	&kp QUOT 
                 &hmp LGUI A    	&hm LALT R      &hm LCTRL S     &hm LSHIFT T    &kp G 			   		&kp M        	&hm RSHIFT N    &hm RCTRL E     &hm RALT I      &hmp RGUI O
                 &kp Z           &kp X           &kp C           &kp D           &kp V				    &kp K       	&kp H           &kp CMMA        &kp DOT         &kp QUESTION
 																&lt FUNC TAB    &tlt NAV SPC  			&tlt NUM BSPC   &lt MEDIA DEL
@@ -314,19 +326,19 @@
         
        	nav_layer {
             bindings = <
-                &trans          &trans          &trans      	&trans          &trans		           	&none           &none           &kp UP_ARROW    &none           &none 
-                &trans          &zm_cut         &zm_copy       	&zm_paste       &caps_word 		        &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &none
-                &trans          &trans 	        &trans      	&trans          &trans 	                &kp HOME        &kp PG_UP       &kp PG_DN       &kp END			&kp INSERT
-																&trans          &trans 					&trans       	&trans 
+                &none           &none           &none      	    &none           &none		           	&none           &none           &kp UP_ARROW    &none           &none 
+                &sk LGUI        &sk LALT        &sk LCTRL       &sk LSHIFT      &caps_word 		        &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &none
+                &zm_undo        &zm_cut 	    &zm_copy        &zm_paste       &none 	                &kp INSERT      &kp HOME        &kp PG_UP       &kp PG_DN       &kp END			
+																&none           &none 					&trans       	&trans 
 		>;
 		};
 		
 		num_layer {
             bindings = <
-                &kp GRAVE		&kp N7        	&kp N8        	&kp N9        	&none    			    &trans          &trans          &trans        &trans        &trans 
-                &kp N0    	    &kp N4        	&kp N5        	&kp N6        	&none			        &trans          &trans          &trans        &trans        &trans
-                &none       	&kp N1        	&kp N2        	&kp N3        	&kp EQUAL				&trans          &trans          &trans        &trans        &trans
-																&none        	&kp MINUS  				&trans        	&trans 
+                &kp GRAVE		&kp N7        	&kp N8        	&kp N9        	&none    			    &none           &none           &none         &none         &none 
+                &kp N0    	    &kp N4        	&kp N5        	&kp N6        	&none			        &caps_word      &sk RSHIFT      &sk RCTRL     &sk RALT      &sk RGUI
+                &none       	&kp N1        	&kp N2        	&kp N3        	&kp EQUAL				&none           &zm_paste       &zm_copy      &zm_cut       &zm_undo
+																&none        	&kp MINUS  				&none        	&none 
 		>;
 		};	
 		
@@ -355,6 +367,15 @@
                 &none           &none           &none           &none           &none   				&trans          &trans          &trans        &trans        &trans   
                                                                 &trans  		&trans  				&trans          &trans 
 		>;
-		};	     
+		};
+
+       	hd_neu {
+            bindings = <
+                &kp W           &kp F           &kp M           &kp P           &kp V 					&kp SLASH      	&kp DOT         &kp Q	       	&kp QUOT        &kp DOUBLE_QUOTES
+                &hmp LGUI R    	&hm LALT S      &hm LCTRL N     &hm LSHIFT T    &kp B 			   		&kp CMMA       	&hm RSHIFT A    &hm RCTRL E     &hm RALT I      &hmp RGUI H
+                &kp X           &kp C           &kp L           &kp D           &kp G				    &kp MINUS      	&kp U           &kp O           &kp Y         &kp K
+																&lt FUNC TAB    &tlt NAV SPC  			&tlt NUM BSPC   &lt MEDIA DEL
+            >;
+		};        
 	};
 };
