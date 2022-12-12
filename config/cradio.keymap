@@ -74,7 +74,18 @@
 			quick-tap-ms = <175>;
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
-		};	
+		};
+        
+        //Create hold tap behaviours to send macros on hold
+        brc_t: brace_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BRACE_TAP"
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+            bindings = <&zm_brace>, <&kp>;
+        };
 	};
 
 	combos {
@@ -133,7 +144,7 @@
 		
 		combo_rbrace {
 			key-positions = <8 18>;
-			bindings = <&kp RIGHT_BRACE>;
+			bindings = <&brc_t 0 RIGHT_BRACE>;
 		};
 		
 		combo_rbracket {
@@ -196,7 +207,40 @@
                 , <&macro_tap &kp V>
                 , <&macro_release &kp LCTRL>
                 ;
-            };
+        };
+         
+        zm_brace: zm_brace {
+            label = "ZM_brace";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp RIGHT_BRACE>
+                , <&macro_tap &kp LEFT_BRACE>
+                , <&macro_tap &kp LEFT_ARROW>
+                ;
+        };
+        
+        zm_bracket: zm_bracket {
+            label = "ZM_bracket";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp RIGHT_BRACKET>
+                , <&macro_tap &kp LEFT_BRACKET>
+                , <&macro_tap &kp LEFT_ARROW>
+                ;
+        };
+        
+        zm_paren: zm_paren {
+            label = "ZM_paren";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp RIGHT_PARENTHESIS>
+                , <&macro_tap &kp LEFT_PARENTHESIS>
+                , <&macro_tap &kp LEFT_ARROW>
+                ;
+        };
     };
 
     keymap {
