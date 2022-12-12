@@ -202,7 +202,7 @@
             key-positions = <27 28>;
             bindings = <&kp SEMI>;
         };
-        5
+        
         //Combos to mess with dropping top pinky row
         combo_r_rp {
             key-positions = <18 19>;
