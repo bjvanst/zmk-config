@@ -114,7 +114,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "tap-preferred";
-            bindings = <&zm_qu>, <&kp>;
+            bindings = <&kp>, <&zm_qu>;
         };
 	};
 
@@ -202,14 +202,14 @@
             key-positions = <27 28>;
             bindings = <&kp SEMI>;
         };
-        
+        5
         //Combos to mess with dropping top pinky row
-        combo_l_rp {
+        combo_r_rp {
             key-positions = <18 19>;
             bindings = <&kp QUOT>;
         };
         
-        combo_r_rp {
+        combo_l_rp {
             key-positions = <10 11>;
             bindings = <&qu_t 0 Q>;
         };
