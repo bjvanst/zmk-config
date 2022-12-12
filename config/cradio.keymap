@@ -79,7 +79,7 @@
         //Create hold tap behaviours to send macros on hold
         brc_t: brace_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "BRACE_TAP"
+            label = "BRACE_TAP";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
