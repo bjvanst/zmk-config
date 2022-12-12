@@ -305,13 +305,8 @@
                 
        	default_layer {
             bindings = <
-<<<<<<< HEAD
                 &qu_t Q 0       &kp W           &kp F           &kp P           &kp B 					&kp J        	&kp L         	&kp U	       	&kp Y         	&kp QUOT 
-                &kp A    	    &kp R           &kp S           &kp T           &kp G 			   		&kp M        	&kp N           &kp E           &kp I           &kp O
-=======
-                &kp Q           &kp W           &kp F           &kp P           &kp B 					&kp J        	&kp L         	&kp U	       	&kp Y         	&kp QUOT 
                 &hmp LGUI A    	&hm LALT R      &hm LCTRL S     &hm LSHIFT T    &kp G 			   		&kp M        	&hm RSHIFT N    &hm RCTRL E     &hm RALT I      &hmp RGUI O
->>>>>>> parent of e567153 (add one shot mods to lower layers)
                 &kp Z           &kp X           &kp C           &kp D           &kp V				    &kp K       	&kp H           &kp CMMA        &kp DOT         &kp QUESTION
 																&lt FUNC TAB    &tlt NAV SPC  			&tlt NUM BSPC   &lt MEDIA DEL
             >;
