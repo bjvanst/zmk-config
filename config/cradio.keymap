@@ -192,6 +192,17 @@
             key-positions = <27 28>;
             bindings = <&kp SEMI>;
         };
+        
+        //Combos to mess with dropping top pinky row
+        combo_l_rp {
+            key-positions = <17 18>;
+            bindings = <&kp QUOT>;
+        };
+        
+        combo_r_rp {
+            key-positions = <10 11>;
+            bindings = <&kp Q>;
+        };
 	};
     
     macros {
