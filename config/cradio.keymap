@@ -156,14 +156,5 @@
                                                                 &trans  		&trans  				&trans          &trans 
 		>;
 		};
-        
-       	hd_neu {
-            bindings = <
-                &kp W           &kp F           &kp M           &kp P           &kp V 					&kp SLASH      	&kp DOT         &kp Q	       	&kp QUOT        &kp DOUBLE_QUOTES
-                &hmp LGUI R    	&hm LALT S      &hm LCTRL N     &hm LSHIFT T    &kp B 			   		&kp CMMA       	&hm RSHIFT A    &hm RCTRL E     &hm RALT I      &hmp RGUI H
-                &kp X           &kp C           &kp L           &kp D           &kp G				    &kp MINUS      	&kp U           &kp O           &kp Y         &kp K
-																&lt FUNC TAB    &tlt NAV SPC  			&tlt NUM BSPC   &lt MEDIA DEL
-            >;
-		}; 
 	};
 };
