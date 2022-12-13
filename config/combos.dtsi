@@ -28,7 +28,6 @@ compatible = "zmk,combos";
 //Thumbs
 COMBO(combo_enter, &lt ZMKL ENTER, 30 24)
 COMBO(combo_esc, &lt ZMKL ESC, 25 33)
-COMBO(left_parenthesis, &kp LEFT_PARENTHESIS, 1 2, NUM)
 
 //Left-hand combos
 COMBO(combo_lbrace, &brc_t 0 LEFT_BRACE, 1 11)
