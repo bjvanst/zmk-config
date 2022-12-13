@@ -116,7 +116,7 @@
        	nav_layer {
             bindings = <
                 &none           &none           &kp TAB      	&none           &none		           	&none           &none           &kp UP_ARROW    &none           &none 
-                &sk LGUI        &sk LALT        &sk LCTRL       &sk LSHIFT      &td_caps    	        &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &none
+                &sk LGUI        &sk LALT        &sk LCTRL       &sk LSHIFT      &caps_word    	        &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &none
                 &kp LC(Z)       &kp LC(X) 	    &kp LC(C)       &kp LC(V)       &none 	                &kp INSERT      &kp HOME        &kp PG_UP       &kp PG_DN       &kp END			
 																&none           &none 					&kp DEL       	&none
 		>;
@@ -125,7 +125,7 @@
 		num_layer {
             bindings = <
                 &kp GRAVE		&kp N7        	&kp N8        	&kp N9        	&none    			    &none           &none           &none         &none         &none 
-                &kp N0    	    &kp N4        	&kp N5        	&kp N6        	&none			        &td_caps        &sk RSHIFT      &sk RCTRL     &sk RALT      &sk RGUI
+                &kp N0    	    &kp N4        	&kp N5        	&kp N6        	&none			        &caps_word      &sk RSHIFT      &sk RCTRL     &sk RALT      &sk RGUI
                 &none       	&kp N1        	&kp N2        	&kp N3        	&kp EQUAL				&none           &kp LC(V)       &kp RC(C)     &kp RC(X)     &kp RC(Z)
 																&none        	&kp MINUS  				&none        	&none
 		>;
