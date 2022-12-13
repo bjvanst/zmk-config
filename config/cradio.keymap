@@ -28,55 +28,8 @@
 };
 
 / {
-	behaviors {
-	
-		//Allow for repeat space and backspace 
-		//after a double-tap
-		tlt: thumb_layer_tap {
-			compatible = "zmk,behavior-hold-tap";
-			label = "THUMB_LAYER_TAP";
-			#binding-cells = <2>;
-			tapping-term-ms = <200>;
-			quick-tap-ms = <175>;
-			flavor = "tap-preferred";
-			bindings = <&mo>, <&kp>;
-		};
-		
-		//Allow for repeat letters, enable sticky mods
-		//for one handed copy pastes mainly
-		hm: homerow_mods {
-			compatible = "zmk,behavior-hold-tap";
-			label = "HOMEROW_MODS";
-			#binding-cells = <2>;
-			tapping-term-ms = <200>;
-			quick-tap-ms = <175>;
-			flavor = "tap-preferred";
-			bindings = <&kp>, <&kp>;
-		};
-		
-		hmi: homerow_mods_index {
-			compatible = "zmk,behavior-hold-tap";
-			label = "HOMEROW_MODS_INDEX";
-			#binding-cells = <2>;
-			tapping-term-ms = <200>;
-			quick-tap-ms = <175>;
-			flavor = "balanced";
-			bindings = <&kp>, <&kp>;
-		};
-
-		//Increase tapping term for pinky home position 
-		//as they seem most likely to accidentally trigger
-		hmp: homerow_mods_pinky {
-			compatible = "zmk,behavior-hold-tap";
-			label = "HOMEROW_MODS_PINKY";
-			#binding-cells = <2>;
-			tapping-term-ms = <250>;
-			quick-tap-ms = <175>;
-			flavor = "tap-preferred";
-			bindings = <&kp>, <&kp>;
-		};
-        
-        //Hold tap behaviours to send macros on hold
+	behaviors {        
+        //keypress on tap, macros on hold
         brc_t: brace_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "BRACE_TAP";
@@ -106,201 +59,45 @@
             flavor = "tap-preferred";
             bindings = <&zm_paren>, <&kp>;
         };
+		
+        ltgt_t: paren_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LTGT_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+            bindings = <&zm_ltgt>, <&kp>;
+        };		
         
+		//send qu on keypress, q on key hold
         qu_t: qu_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "QU_TAP";
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&zm_qu>;
-        };
+		};
+			
+		//Tap Dances
+		td_caps: tap_dance_caps {
+		    compatible = "zmk,bheavior-tap-dance";
+			label = "TAP_DANCE_CAPS";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&caps_word>, <&kp CAPSLOCK>;
+		};
+
 	};
 
 	combos {
-		compatible = "zmk,combos";
-
-		//Thumb combos
-		//Left thumb
-		combo_enter {
-			key-positions = <30 24>;
-			bindings = <&lt ZMKL ENTER>;
-		};
-		
-		//Right thumb
-		combo_esc {
-			key-positions = <25 33>;
-			bindings = <&lt ZMKL ESC>;
-		};
-
-		//Left-hand combos
-			
-		combo_lbrace {
-			key-positions = <1 11>;
-			bindings = <&brc_t 0 LEFT_BRACE>;
-		};
-		
-		combo_lbracket {
-			key-positions = <2 12>;
-			bindings = <&brk_t 0 LEFT_BRACKET>;
-		};
-		
-		combo_lparen {
-			key-positions = <3 13>;
-			bindings = <&prn_t 0 LPAR>;
-		};
-		
-		combo_lthan {
-			key-positions = <12 22>;
-			bindings = <&kp LESS_THAN>;
-		};
-		
-		combo_slash {
-			key-positions = <13 23>;
-			bindings = <&kp SLASH>;
-		};
-		
-		
-		//Right-hand combos		
-		combo_rbrace {
-			key-positions = <8 18>;
-			bindings = <&kp RIGHT_BRACE>;
-		};
-		
-		combo_rbracket {
-			key-positions = <7 17>;
-			bindings = <&kp RIGHT_BRACKET>;
-		};
-		
-		combo_rparen {
-			key-positions = <6 16>;
-			bindings = <&kp RIGHT_PARENTHESIS>;
-		};
-		
-		combo_gthan {
-			key-positions = <17 27>;
-			bindings = <&kp GREATER_THAN>;
-		};
-		
-		combo_bslash {
-			key-positions = <16 26>;
-			bindings = <&kp BACKSLASH>;
-		};
-        
-        //Build a semi-colon!
-        combo_semi {
-            key-positions = <27 28>;
-            bindings = <&kp SEMI>;
-        };
-        
-        //Combos to mess with dropping top pinky row
-        combo_r_rp {
-            key-positions = <18 19>;
-            bindings = <&kp QUOT>;
-        };
-        
-        combo_l_rp {
-            key-positions = <10 11>;
-            bindings = <&qu_t Q 0>;
-        };
+         #include "combos.dtsi"
 	};
     
-    macros {
-    
-        zm_copy: zm_copy {
-            label = "ZM_copy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp C>
-                , <&macro_release &kp LCTRL>
-                ;
-            };
-            
-        zm_cut: zm_cut {
-            label = "ZM_cut";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp X>
-                , <&macro_release &kp LCTRL>
-                ;
-            };
-
-        zm_paste: zm_paste {
-            label = "ZM_paste";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp V>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-        
-        zm_undo: zm_undo {
-            label = "ZM_undo";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp Z>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-        
-        zm_brace: zm_brace {
-            label = "ZM_brace";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_tap &kp LEFT_BRACE>
-                , <&macro_tap &kp RIGHT_BRACE>
-                , <&macro_tap &kp LEFT_ARROW>
-                ;
-        };
-        
-        zm_bracket: zm_bracket {
-            label = "ZM_bracket";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_tap &kp LEFT_BRACKET>
-                , <&macro_tap &kp RIGHT_BRACKET>
-                , <&macro_tap &kp LEFT_ARROW>
-                ;
-        };
-        
-        zm_paren: zm_paren {
-            label = "ZM_paren";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_tap &kp LEFT_PARENTHESIS>
-                , <&macro_tap &kp RIGHT_PARENTHESIS>
-                , <&macro_tap &kp LEFT_ARROW>
-                ;
-        };
-        
-        zm_qu: zm_qu {
-            label = "ZM_qu";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            bindings
-                = <&kp Q &kp U>
-                ;
-        };
+    macros {  
+        #include "macros.dtsi"
     };
 
     keymap {
@@ -311,23 +108,23 @@
                 &qu_t Q 0       &kp W           &kp F           &kp P           &kp B 					&kp J        	&kp L         	&kp U	       	&kp Y         	&kp QUOT 
                 &kp A    	    &kp R           &kp S           &kp T           &kp G 			   		&kp M        	&kp N           &kp E           &kp I           &kp O
                 &kp Z           &kp X           &kp C           &kp D           &kp V				    &kp K       	&kp H           &kp CMMA        &kp DOT         &kp QUESTION
-																&lt FUNC TAB    &tlt NAV SPC  			&tlt NUM BSPC   &lt MEDIA DEL
+																&mo FUNC        &kp SPC  			    &kp BSPC        &mo MEDIA
             >;
 		};
         
        	nav_layer {
             bindings = <
-                &none           &none           &none      	    &none           &none		           	&none           &none           &kp UP_ARROW    &none           &none 
-                &sk LGUI        &sk LALT        &sk LCTRL       &sk LSHIFT      &caps_word 		        &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &none
+                &none           &none           &kp TAB      	&none           &none		           	&none           &none           &kp UP_ARROW    &none           &none 
+                &sk LGUI        &sk LALT        &sk LCTRL       &sk LSHIFT      &td_caps    	        &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &none
                 &kp LC(Z)       &kp LC(X) 	    &kp LC(C)       &kp LC(V)       &none 	                &kp INSERT      &kp HOME        &kp PG_UP       &kp PG_DN       &kp END			
-																&none           &none 					&trans       	&trans 
+																&none           &none 					&kp DEL       	&none
 		>;
 		};
 		
 		num_layer {
             bindings = <
                 &kp GRAVE		&kp N7        	&kp N8        	&kp N9        	&none    			    &none           &none           &none         &none         &none 
-                &kp N0    	    &kp N4        	&kp N5        	&kp N6        	&none			        &caps_word      &sk RSHIFT      &sk RCTRL     &sk RALT      &sk RGUI
+                &kp N0    	    &kp N4        	&kp N5        	&kp N6        	&none			        &td_caps        &sk RSHIFT      &sk RCTRL     &sk RALT      &sk RGUI
                 &none       	&kp N1        	&kp N2        	&kp N3        	&kp EQUAL				&none           &kp LC(V)       &kp RC(C)     &kp RC(X)     &kp RC(Z)
 																&none        	&kp MINUS  				&none        	&none
 		>;
