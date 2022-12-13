@@ -80,7 +80,8 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&zm_qu>;
 		};
-			
+
+/*			
 		//Tap Dances
 		td_caps: tap_dance_caps {
 		    compatible = "zmk,bheavior-tap-dance";
@@ -89,7 +90,7 @@
 			tapping-term-ms = <200>;
 			bindings = <&caps_word>, <&kp CAPSLOCK>;
 		};
-
+*/
 	};
 
 	combos {
