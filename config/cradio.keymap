@@ -119,185 +119,11 @@
 	};
 
 	combos {
-		compatible = "zmk,combos";
-
-		//Thumb combos
-		//Left thumb
-		combo_enter {
-			key-positions = <30 24>;
-			bindings = <&lt ZMKL ENTER>;
-		};
-		
-		//Right thumb
-		combo_esc {
-			key-positions = <25 33>;
-			bindings = <&lt ZMKL ESC>;
-		};
-
-		//Left-hand combos
-		combo_lcaps_word {
-			key-positions = <13 14>;
-			bindings = <&caps_word>;
-		};
-			
-		combo_lbrace {
-			key-positions = <1 11>;
-			bindings = <&brc_t 0 LEFT_BRACE>;
-		};
-		
-		combo_lbracket {
-			key-positions = <2 12>;
-			bindings = <&brk_t 0 LEFT_BRACKET>;
-		};
-		
-		combo_lparen {
-			key-positions = <3 13>;
-			bindings = <&prn_t 0 LPAR>;
-		};
-		
-		combo_lthan {
-			key-positions = <12 22>;
-			bindings = <&kp LESS_THAN>;
-		};
-		
-		combo_slash {
-			key-positions = <13 23>;
-			bindings = <&kp SLASH>;
-		};
-		
-		
-		//Right-hand combos
-		combo_rcaps_word {
-			key-positions = <15 16>;
-			bindings = <&caps_word>;
-		};
-		
-		combo_rbrace {
-			key-positions = <8 18>;
-			bindings = <&kp RIGHT_BRACE>;
-		};
-		
-		combo_rbracket {
-			key-positions = <7 17>;
-			bindings = <&kp RIGHT_BRACKET>;
-		};
-		
-		combo_rparen {
-			key-positions = <6 16>;
-			bindings = <&kp RIGHT_PARENTHESIS>;
-		};
-		
-		combo_gthan {
-			key-positions = <17 27>;
-			bindings = <&kp GREATER_THAN>;
-		};
-		
-		combo_bslash {
-			key-positions = <16 26>;
-			bindings = <&kp BACKSLASH>;
-		};
-        
-        //Build a semi-colon!
-        combo_semi {
-            key-positions = <27 28>;
-            bindings = <&kp SEMI>;
-        };
-        
-        //Combos to mess with dropping top pinky row
-        combo_r_rp {
-            key-positions = <18 19>;
-            bindings = <&kp QUOT>;
-        };
-        
-        combo_l_rp {
-            key-positions = <10 11>;
-            bindings = <&qu_t Q 0>;
-        };
+		#include "combos.dtsi"
 	};
     
-    macros {
-    
-        zm_copy: zm_copy {
-            label = "ZM_copy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp C>
-                , <&macro_release &kp LCTRL>
-                ;
-            };
-            
-        zm_cut: zm_cut {
-            label = "ZM_cut";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp X>
-                , <&macro_release &kp LCTRL>
-                ;
-            };
-
-        zm_paste: zm_paste {
-            label = "ZM_paste";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp V>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-         
-        zm_brace: zm_brace {
-            label = "ZM_brace";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_tap &kp LEFT_BRACE>
-                , <&macro_tap &kp RIGHT_BRACE>
-                , <&macro_tap &kp LEFT_ARROW>
-                ;
-        };
-        
-        zm_bracket: zm_bracket {
-            label = "ZM_bracket";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_tap &kp LEFT_BRACKET>
-                , <&macro_tap &kp RIGHT_BRACKET>
-                , <&macro_tap &kp LEFT_ARROW>
-                ;
-        };
-        
-        zm_paren: zm_paren {
-            label = "ZM_paren";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_tap &kp LEFT_PARENTHESIS>
-                , <&macro_tap &kp RIGHT_PARENTHESIS>
-                , <&macro_tap &kp LEFT_ARROW>
-                ;
-        };
-        
-        zm_qu: zm_qu {
-            label = "ZM_qu";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            bindings
-                = <&kp Q &kp U>
-                ;
-        };
+    macros {         
+		#include "macros.dtsi"
     };
 
     keymap {
@@ -314,19 +140,19 @@
         
        	nav_layer {
             bindings = <
-                &trans          &trans          &trans      	&trans          &trans		           	&none           &none           &kp UP_ARROW    &none           &none 
-                &trans          &zm_cut         &zm_copy       	&zm_paste       &caps_word 		        &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &none
-                &trans          &trans 	        &trans      	&trans          &trans 	                &kp HOME        &kp PG_UP       &kp PG_DN       &kp END			&kp INSERT
-																&trans          &trans 					&trans       	&trans 
+                &none           &none           &none      	    &none           &none		           	&none           &none           &kp UP_ARROW    &none           &none 
+                &none           &none 	        &none           &none 		    &caps_word 		        &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &none
+                &none           &zm_cut         &zm_copy       	&zm_paste       &none 	                &kp INSERT      &kp HOME        &kp PG_UP       &kp PG_DN       &kp END			
+																&trans          &none 					&none       	&trans 
 		>;
 		};
 		
 		num_layer {
             bindings = <
-                &kp GRAVE		&kp N7        	&kp N8        	&kp N9        	&none    			    &trans          &trans          &trans        &trans        &trans 
-                &kp N0    	    &kp N4        	&kp N5        	&kp N6        	&none			        &trans          &trans          &trans        &trans        &trans
-                &none       	&kp N1        	&kp N2        	&kp N3        	&kp EQUAL				&trans          &trans          &trans        &trans        &trans
-																&none        	&kp MINUS  				&trans        	&trans 
+                &kp GRAVE		&kp N7        	&kp N8        	&kp N9        	&none    			    &none           &none           &none          &none           &none 
+                &kp N0    	    &kp N4        	&kp N5        	&kp N6        	&none			        &none           &none           &none          &none           &none
+                &none       	&kp N1        	&kp N2        	&kp N3        	&kp EQUAL				&none           &none           &none          &none           &none
+																&none        	&kp MINUS  				&none        	&none 
 		>;
 		};	
 		

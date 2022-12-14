@@ -1,0 +1,57 @@
+zm_brace: zm_brace {
+	label = "ZM_brace";
+	compatible = "zmk,behavior-macro";
+	#binding-cells = <0>;
+	wait-ms = <10>;
+	bindings
+		= <&macro_tap &kp LEFT_BRACE>
+		, <&macro_tap &kp RIGHT_BRACE>
+		, <&macro_tap &kp LEFT_ARROW>
+		;
+};
+
+zm_bracket: zm_bracket {
+	label = "ZM_bracket";
+	compatible = "zmk,behavior-macro";
+	#binding-cells = <0>;
+	wait-ms = <10>;
+	bindings
+		= <&macro_tap &kp LEFT_BRACKET>
+		, <&macro_tap &kp RIGHT_BRACKET>
+		, <&macro_tap &kp LEFT_ARROW>
+		;
+};
+
+zm_paren: zm_paren {
+	label = "ZM_paren";
+	compatible = "zmk,behavior-macro";
+	#binding-cells = <0>;
+	wait-ms = <10>;
+	bindings
+		= <&macro_tap &kp LEFT_PARENTHESIS>
+		, <&macro_tap &kp RIGHT_PARENTHESIS>
+		, <&macro_tap &kp LEFT_ARROW>
+		;
+};
+
+zm_ltgt: zm_ltgt {
+	label = "ZM_ltgt";
+	compatible = "zmk,behavior-macro";
+	#binding-cells = <0>;
+	wait-ms = <10>;
+	bindings
+		= <&macro_tap &kp LT>
+		, <&macro_tap &kp GT>
+		, <&macro_tap &kp LEFT_ARROW>
+		;
+};
+
+zm_qu: zm_qu {
+	label = "ZM_qu";
+	compatible = "zmk,behavior-macro";
+	#binding-cells = <0>;
+	wait-ms = <10>;
+	bindings
+		= <&kp Q &kp U>
+		;
+};
