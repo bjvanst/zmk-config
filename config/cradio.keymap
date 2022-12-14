@@ -152,7 +152,7 @@
             bindings = <
                 &none           &none           &none      	    &none           &none		           	&none           &none           &kp UP_ARROW    &none           &none 
                 &none           &none 	        &none           &none 		    &caps_word 		        &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &none
-                &none           &zm_cut         &zm_copy       	&zm_paste       &none 	                &kp INSERT      &kp HOME        &kp PG_UP       &kp PG_DN       &kp END			
+                &LC(Z)          &LC(X)         &LC(C)       	&LC(V)          &none 	                &kp INSERT      &kp HOME        &kp PG_UP       &kp PG_DN       &kp END			
 																&trans          &none 					&none       	&trans 
 		>;
 		};
