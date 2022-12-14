@@ -106,6 +106,16 @@
             flavor = "tap-preferred";
             bindings = <&zm_paren>, <&kp>;
         };
+		
+        ltgt_t: paren_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LTGT_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+            bindings = <&zm_ltgt>, <&kp>;
+        };			
         
         qu_t: qu_tap {
             compatible = "zmk,behavior-hold-tap";
