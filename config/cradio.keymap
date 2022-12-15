@@ -107,7 +107,7 @@
             bindings = <&zm_paren>, <&kp>;
         };
 		
-        ltgt_t: paren_tap {
+        ltgt_t: ltgt_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "LTGT_TAP";
             #binding-cells = <2>;
