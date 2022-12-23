@@ -27,6 +27,7 @@ compatible = "zmk,combos";
 
 //Thumbs
 COMBO(combo_enter, &lt ZMKL ENTER, 30 24)
+COMBO(combo_repeat, &key_repeat, 30 31)
 COMBO(combo_esc, &lt ZMKL ESC, 25 33)
 
 //Left-hand combos
